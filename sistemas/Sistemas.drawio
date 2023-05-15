@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net" modified="2023-03-29T00:23:50.449Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:111.0) Gecko/20100101 Firefox/111.0" etag="_B3NWh5pnyJ2c8erYC2f" version="21.1.1" type="device">
+  <diagram name="Page-1" id="NWGbfZt-ezZkURY41zj4">
+    <mxGraphModel dx="2164" dy="627" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-1" value="Sistema" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="180" y="220" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-2" value="Programa" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="590" y="200" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-3" value="Frec_Ejecucion" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="660" y="160" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-5" value="Nivel" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="230" y="160" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-8" value="Modos" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="100" y="320" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-9" value="Archivos" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="180" y="360" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-14" value="Sistemas" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="480" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-15" value="+Nivel Enum(&quot;Bajo&quot;,&quot;Medio&quot;,&quot;Alto&quot;) PK" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="00rmxBKk-tLO5jlDRo6B-14">
+          <mxGeometry y="50" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-16" value="Programas" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-200" y="650" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-17" value="+Freq_Ejec Enum(&quot;Baja&quot;,&quot;Media&quot;,&quot;Alta&quot;) PK" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="00rmxBKk-tLO5jlDRo6B-16">
+          <mxGeometry y="50" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-18" value="Archivos" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="605" y="720" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-19" value="+Modos Enum(&#39;input&#39;,&quot;output&quot;,input-output&quot;)" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="00rmxBKk-tLO5jlDRo6B-18">
+          <mxGeometry y="50" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-20" value="Programas_Archivos" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="770" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-21" value="&lt;div&gt;+Freq_Ejec_´programa Enum(&quot;Baja&quot;,&quot;Media&quot;,&quot;Alta&quot;)&lt;/div&gt;+Modos_archivo Enum(&#39;input&#39;,&quot;output&quot;,input-output&quot;)" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="00rmxBKk-tLO5jlDRo6B-20">
+          <mxGeometry y="50" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-22" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;entryX=-0.025;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="00rmxBKk-tLO5jlDRo6B-17" target="00rmxBKk-tLO5jlDRo6B-21">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="330" y="690" as="sourcePoint" />
+            <mxPoint x="470" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-23" value="Sistemas_Programas" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="480" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-24" value="&lt;div&gt;+Nivel_sistema Enum(&quot;Bajo&quot;,&quot;Medio&quot;,&quot;Alto&quot;)&lt;/div&gt;&lt;div&gt;+Freq_Ejec_´programa Enum(&quot;Baja&quot;,&quot;Media&quot;,&quot;Alta&quot;)&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="00rmxBKk-tLO5jlDRo6B-23">
+          <mxGeometry y="50" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-25" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="00rmxBKk-tLO5jlDRo6B-18" target="00rmxBKk-tLO5jlDRo6B-20">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="420" y="710" as="sourcePoint" />
+            <mxPoint x="470" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-26" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;exitX=0.006;exitY=0.171;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="00rmxBKk-tLO5jlDRo6B-24" target="00rmxBKk-tLO5jlDRo6B-16">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="250" y="660" as="sourcePoint" />
+            <mxPoint x="350" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="00rmxBKk-tLO5jlDRo6B-28" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;entryX=1;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="00rmxBKk-tLO5jlDRo6B-15" target="00rmxBKk-tLO5jlDRo6B-24">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="250" y="660" as="sourcePoint" />
+            <mxPoint x="350" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
