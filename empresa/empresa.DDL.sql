@@ -3,9 +3,10 @@ create database empresa;
 use empresa;
 
 create table empleados(
-nro_legajo int primary key,
-nombre varchar(25),
-apellido varchar(50),
+nro_Legajo int primary key,
+nombre varchar(45),
+apellido varchar(45),
+tipo enum('efectivo','contratado'),
 codigo_departamento int
 );
 
@@ -15,20 +16,20 @@ descripcion text
 );
 
 create table efectivos(
-nro_legajo_empleados int primary key,
-salario int
+nro_Legajo int primary key,
+salario double
 );
 
 create table contratados(
-nro_legajo_empleados int primary key,
-cuit_consultora int,
-precio_comun int,
-precio_extra int
+nro_Legajo int primary key,
+cuil_Consultora int,
+horaComun double,
+horaExtra double
 );
 
 create table consultora(
-cuit int primary key,
-social text
+cuil int primary key,
+nombre varchar(50)
 );
 
 alter table empleados
@@ -36,15 +37,18 @@ add foreign key(codigo_departamento)
 references departamentos(codigo);
 
 alter table contratados
-add foreign key(cuit_consultora)
-references consultora(cuit);
+add foreign key(cuil_Consultora)
+references consultora(cuil);
 
 alter table efectivos
-add foreign key(nro_legajo_empleados)
-references empleados(nro_legajo);
+add foreign key(nro_Legajo)
+references empleados(nro_Legajo);
 
 alter table contratados
-add foreign key(nro_legajo_empleados)
-references empleados(nro_legajo);
+add foreign key(nro_Legajo)
+references empleados(nro_Legajo);
+
+alter table contratados
+add column valorHoraComun int, add column valorHoraExtra int;
 
 

@@ -1,25 +1,34 @@
-select nro_legajo,descripcion from empleados join efectivos on nro_legajo = nro_legajo_empleados
-join departamentos on codigo = codigo_departamento;
+-- Mostrar las descripciones de los departamentos de los empleados efectivos
+select descripcion from empleados join departamentos on codigo = codigo_departamento
+where tipo = 'efectivo';
 
-select nro_legajo,descripcion from empleados join contratados on nro_legajo = nro_legajo_empleados
-join departamentos on codigo = codigo_departamento;
+-- Mostrar las descripciones de los departamentos de los empleados contratados
+select descripcion from empleados join departamentos on codigo = codigo_departamento
+where tipo = 'contratado';
 
--- no terminado
-select count(efectivos.nro_legajo_empleados) as cantidad_efectivos, count(contratados.nro_legajo_empleados) as cantidad_contratados from empleados 
-join efectivos on nro_legajo = efectivos.nro_legajo_empleados 
-join contratados on nro_legajo = contratados.nro_legajo_empleados; 
+-- ¿Cuantos empleados efectivos y contratados hay en la empresa?
+select count(*),tipo from empleados GROUP BY tipo;
 
+-- ¿Cual es el promedio del salario de los empleados efectivos?
 select avg(salario) as promedio from efectivos;
 
-select precio_comun from contratados;
+-- ¿Cuanto ganan los empleados contratados por mes sin horas extras?
+select nombre,((horaComun * valorHoraComun) * 30) as valor
+from contratados join empleados on contratados.nro_Legajo = empleados.nro_Legajo;
 
-select (precio_extra *30) as total from contratados;
+-- ¿Cuanto ganan los empleado contratados por mes si trabajaran todas las horas extras?
+select nombre, ((horaComun * valorHoraComun) + (horaExtra * valorHoraExtra) * 30) as valor from contratados
+join empleados on contratados.nro_Legajo = empleados.nro_Legajo;
 
-select avg(precio_comun) as promedio_comun from contratados;
+-- ¿Cual es el promedio del salario de los empleados contratados que cumplen sus horas comun?
+select avg((horaComun * valorHoraComun) * 30) as promedio_comun from contratados;
 
-select avg(precio_extra) as promedio_extra from contratados;
+-- ¿Cual es el promedio del salario de los empleados contratados que cumplen sus horas extras?
+select avg((horaExtra * valorHoraExtra) * 30) as promedio_extra from contratados;
 
+-- se les va aumentar un 20% de su salario a los efectivos ¿Cuanto seria el salario mensual? 
 select (salario * 1.20) as aumento from efectivos;
 
-select ((precio_comun *1.20) *30) as aumento_mes, (precio_extra * 1.18) as aumento_extra from contratados;
+-- se les va aumentar un 20% de lo que ganan en el mes por horas comun y 18% por horas extra a los contratados ¿Cuanto seria lo que ganan por mes?
+select ((HoraComun * valorHoraComun) * 1.20 *30)  as aumento_mes, ((HoraExtra * valorHoraExtra) * 1.18) as aumento_extra from contratados;
 
