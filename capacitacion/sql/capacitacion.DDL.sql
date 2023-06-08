@@ -4,8 +4,8 @@ use capacitacion;
 
 create table cursos(
 codigo int primary key,
-nombre varchar(45),
-cuota int,
+nombre varchar(50),
+cuota double,
 duracion int,
 dni_instructores int
 );
@@ -18,9 +18,9 @@ tel int
 
 create table alumnos(
 dni int primary key,
-nombre varchar(45),
+nombre varchar(50),
 tel int,
-email varchar(45)
+email varchar(50)
 );
 
 create table alumnos_cursos(

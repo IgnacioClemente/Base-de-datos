@@ -15,14 +15,20 @@ join alumnos_cursos on codigo = codigo_cursos
 join alumnos on alumnos.dni = dni_alumnos;
 
 -- cual es el curso que tiene mas alumnos
-select count(*),cursos.nombre,max(alumnos.dni) from cursos
+select count(*) as cantidad,cursos.nombre from cursos
 join alumnos_cursos on codigo_cursos = cursos.codigo
 join alumnos on dni_alumnos = alumnos.dni group by cursos.nombre;
 
 -- cual es el instructor con mas cursos
-select count(*), instructores.nombre, cursos.nombre from instructores
+select count(*) as cantidad, instructores.nombre, cursos.nombre as "nombre curso" from instructores
 join cursos on cursos.dni_instructores = instructores.dni GROUP BY instructores.nombre;
 
 -- cual es el promedio del profesor de algun curso
 select avg(cursos.cuota) as promedio,instructores.nombre from instructores
-join cursos on cursos.dni_instructores = instructores.dni where instructores.dni = 74357435;
+join cursos on cursos.dni_instructores = instructores.dni where instructores.nombre like "%Daniel%";
+
+-- Traer a los alumnos que esten en más de dos cursos
+
+-- el nombre de los alumnos sin numero de telefono
+
+-- Traer al instructor con el sueldo más alto
